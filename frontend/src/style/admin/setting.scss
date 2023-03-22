@@ -1,0 +1,25 @@
+.setting-container {
+  padding: 20px 20px;
+  height: calc(100% - 150px);
+  background-color: #fff;
+  border-radius: 14px;
+  overflow-y: hidden;
+
+  .setting-tag-item + .setting-tag-item,
+  .setting-tag-item:first-child {
+    margin-right: 5px;
+  }
+
+  .el-form-item__label {
+    font-size: 16px;
+  }
+
+  .el-form-item {
+    margin-bottom: 12px;
+  }
+
+  .el-tag {
+    // padding: 15px 12px;
+    --el-tag-font-size: 14px;
+  }
+}

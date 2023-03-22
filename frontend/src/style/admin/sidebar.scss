@@ -1,0 +1,115 @@
+.sidebar {
+  --el-menu-border-color: rgb(26, 34, 38);
+  height: 100%;
+
+  &>li {
+    animation: sidebar-enter .3s ease;
+    animation-delay: .5s;
+  }
+
+  &>li>i,
+  &>li>div>i {
+    transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &>li:hover {
+
+    &>i,
+    &>div>i {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.side-user-container {
+  padding: 20px 10px 0 10px;
+  background-color: rgb(26, 34, 38);
+  .side-user {
+    padding: 10px;
+    background-color: rgb(53, 64, 68);
+    border: 1px solid #606266;
+    border-radius: 12px;
+    color: #fff;
+    animation: sidebar-enter .3s ease;
+    animation-delay: .5s;
+  
+    .side-user-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+
+      .avatar {
+        height: 60px;
+        border-radius: 50%;
+      }
+    
+      .desc {
+        margin-left: 5px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    
+        > span {
+          font-weight: 700;
+        }
+    
+        .state {
+          display: inline-flex;
+          align-items: baseline;
+    
+          .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #2ed573;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+
+    .logout-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: flex-start;
+      padding: 3px 11px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color .3s ease;
+
+      &:hover {
+        background-color: rgb(26, 34, 38);
+      }
+
+      span {
+        margin-left: 5px;
+        font-size: 14px;
+        user-select: none;
+      }
+    }
+  }
+}
+
+
+@keyframes sidebar-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) skewY(5deg);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sidebar-leave {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) skewY(-10deg);
+  }
+  to {
+    opacity: 1;
+  }
+}

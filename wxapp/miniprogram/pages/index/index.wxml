@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="login-box">
+    <van-image class="avatar" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" width="100" height="100" round/>
+    <van-field
+      model:value="{{ studentCard }}"
+      label="用户名"
+      placeholder="请输入用户名"
+      clickable
+    />
+    <van-field
+      model:value="{{ password }}"
+      type="password"
+      label="密码"
+      placeholder="请输入密码"
+      clickable
+    />
+    <van-button class="login-btn" color="#409EFF" bindtap="login" block>登录</van-button>
+  </view>
+  <van-toast id="van-toast" />
+</view>

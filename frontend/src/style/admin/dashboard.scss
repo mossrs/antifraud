@@ -1,0 +1,91 @@
+.header-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  // margin-bottom: 20px;
+
+  .number-card {
+    width: 17.4%;
+    background-color: #fff;
+    transition: all .3s ease;
+    padding: 30px 45px;
+    border-radius: 18px;
+    border: 1px solid var(--el-border-color-light);
+    box-shadow:
+      0px 0px 2.2px rgba(0, 0, 0, 0.006),
+      0px 0px 5.3px rgba(0, 0, 0, 0.008),
+      0px 0px 10px rgba(0, 0, 0, 0.01),
+      0px 0px 17.9px rgba(0, 0, 0, 0.012),
+      0px 0px 33.4px rgba(0, 0, 0, 0.014),
+      0px 0px 80px rgba(0, 0, 0, 0.02)
+    ;
+
+    .number-card__main {
+      // width: 285px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: left;
+      justify-content: space-between;
+
+      .number {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+  
+      .number-desc {
+        font-size: 16px;
+        color: #909399;
+      }
+  
+      .number-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+}
+
+.charts-container {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: calc(100% - 304px);
+
+  .chart-card {
+    height: 46.3%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 30px 0 30px;
+    margin-top: 20px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--el-border-color-light);
+    transition: all .4s ease;
+    cursor: pointer;
+
+    &:nth-child(n + 2) {
+      width: 64%;
+    }
+
+    &:nth-child(3n + 1) {
+      width: 27%;
+    }
+  
+    &:hover {
+      // padding: 45px;
+      // border-radius: 18px;
+      transform: translateY(-7px);
+      background-color: #f7f7f7;
+    }
+  }
+}

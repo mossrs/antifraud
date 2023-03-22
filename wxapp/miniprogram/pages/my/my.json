@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-tabbar": "../../custom-tab-bar/index",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

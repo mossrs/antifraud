@@ -1,0 +1,60 @@
+@use 'nav';
+@use 'var';
+@use 'sidebar';
+@use 'quiz';
+@use 'dashboard';
+@use 'user';
+@use 'setting';
+
+.page-header {
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: var(--box-shadow);
+
+  p {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 14px;
+    color: #909399;
+  }
+}
+
+.el-button {
+  transition: all .3s ease !important;
+}
+
+.slide-enter-from {
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateY(30%);
+  opacity: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-enter-active {
+  transition: transform .5s cubic-bezier(0.19,1,0.22,1), opacity .5s ease;
+}
+
+.slide-leave-active {
+  transition: transform .2s cubic-bezier(0.19,1,0.22,1), opacity .2s ease;
+}
+
+.el-main {
+  overflow: hidden;
+}

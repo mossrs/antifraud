@@ -1,0 +1,54 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /antifraud
+
+spring:
+  main:
+    banner-mode: off
+  config:
+    activate:
+      on-profile: dev
+  # mysql连接池
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # mysql8 url配置
+      url: jdbc:mysql://localhost:3306/antifraud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: root
+
+# mybatis-plus全局基础配置
+mybatis-plus:
+  type-aliases-package: com.mossflower.antifraud.entity
+  mapper-locations: classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml, classpath*:com/mossflower/antifraud/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      table-underline: true
+      id-type: auto
+      table-prefix: t_
+
+# actable配置
+actable:
+  table:
+    auto: update
+  model:
+    pack: com.mossflower.antifraud.entity
+  database:
+    type: mysql
+
+# 日志
+logging:
+  level:
+    root: info
+  logback:
+    rollingpolicy:
+      file-name-pattern: logs/app-%d-%i.log
+      max-history: 15
+      max-file-size: 100MB
+  file:
+    name: logs/app.log

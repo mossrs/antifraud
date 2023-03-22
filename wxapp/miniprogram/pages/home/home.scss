@@ -1,0 +1,106 @@
+/* pages/home/home.wxss */
+.container {
+  display: block;
+  padding: 0;
+  background-color: #fdfdfe;
+
+  .quiz-container {
+    padding: 15px 0;
+    overflow: hidden;
+    
+    .quiz-items {
+      position: relative;
+      padding: 20rpx 20rpx;
+      animation: fade-in .3s ease;
+    }
+
+    .quiz-item {
+      padding: 0 20rpx;
+      margin-bottom: 20rpx;
+
+      .radios {
+        margin-top: 10px;
+      }
+
+      .checkboxs {
+        position: relative;
+        top: 10px;
+      }
+      
+      .content {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .van-skeleton {
+        margin-bottom: 50rpx;
+      }
+
+      .van-cell {
+        padding: 10px 0;
+      }
+      
+      .van-cell__title {
+        margin-right: 10px;
+      }
+    }
+    
+    .submit-btn {
+      position: fixed;
+      left: 50%;
+      bottom: 180rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      width: 160px;
+      height: 38px;
+      border-radius: 9px;
+      background-color: rgba(64, 158, 255, .2);
+      backdrop-filter: blur(8px) brightness(125%);
+      border: 2px solid #409EFF;
+      transition: all .3s ease;
+      overflow-x: hidden;
+      transform: translateX(-50%);
+      box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.011),
+        0px 0px 5.3px rgba(0, 0, 0, 0.016),
+        0px 0px 10px rgba(0, 0, 0, 0.02),
+        0px 0px 17.9px rgba(0, 0, 0, 0.024),
+        0px 0px 33.4px rgba(0, 0, 0, 0.029),
+        0px 0px 80px rgba(0, 0, 0, 0.04)
+      ;
+
+      &:hover, &:active {
+        transform: translateX(-50%) scale3d(.96, .96, .96);
+      }
+
+      &__progress {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #409EFF;
+        transition: transform .4s ease;
+      }
+
+      &__title {
+        color: #333;
+        font-size: 15px;
+        z-index: 2;
+        position: relative;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

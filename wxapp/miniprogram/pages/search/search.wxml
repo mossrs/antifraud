@@ -1,0 +1,2 @@
+<!--pages/search/search.wxml-->
+<van-empty description="开发中" image="../../../../asset/img/developing.png" />

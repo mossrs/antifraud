@@ -1,0 +1,49 @@
+<template>
+  <div class="side-user-container">
+    <div class="side-user">
+      <div class="side-user-info">
+        <img class="avatar" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png">
+        <div class="desc">
+          <span>Administrator</span>
+          <div class="state">
+            <div class="dot"></div>
+            <span>Online</span>
+          </div>
+        </div>
+      </div>
+      <el-popconfirm title="确定登出吗？" effect="dark" @confirm="logout">
+        <template #reference>
+          <div class="logout-btn">
+            <i class="logout-icon">
+              <svg t="1659093170229" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="3838" width="18" height="18">
+              <path
+                d="M593.92 838.51264v-95.35488a40.96 40.96 0 1 1 81.92 0v95.35488C675.84 883.77344 640.6144 921.6 595.61984 921.6H203.10016C158.1056 921.6 122.88 883.77344 122.88 838.51264V185.48736C122.88 140.22656 158.1056 102.4 203.10016 102.4h392.51968C640.6144 102.4 675.84 140.22656 675.84 185.48736v193.9456a40.96 40.96 0 1 1-81.92 0v-193.9456c0-1.024 0.06144-1.14688 0.90112-1.16736H203.89888c0.83968 0 0.90112 0.16384 0.90112 1.16736v653.02528c0 1.024-0.06144 1.14688-0.90112 1.16736h390.92224c-0.83968 0-0.90112-0.16384-0.90112-1.16736z"
+                fill="#ffffff" p-id="3839"></path>
+              <path
+                d="M430.08 512m40.96 0l327.68 0q40.96 0 40.96 40.96l0 0q0 40.96-40.96 40.96l-327.68 0q-40.96 0-40.96-40.96l0 0q0-40.96 40.96-40.96Z"
+                fill="#ffffff" p-id="3840"></path>
+              <path
+                d="M782.236186 393.865198m28.963094 28.963094l101.370828 101.370828q28.963094 28.963094 0 57.926188l0 0q-28.963094 28.963094-57.926188 0l-101.370828-101.370828q-28.963094-28.963094 0-57.926188l0 0q28.963094-28.963094 57.926188 0Z"
+                fill="#ffffff" p-id="3841"></path>
+              <path
+                d="M724.309998 654.538214m28.963094-28.963094l101.370828-101.370828q28.963094-28.963094 57.926188 0l0 0q28.963094 28.963094 0 57.926188l-101.370828 101.370828q-28.963094 28.963094-57.926188 0l0 0q-28.963094-28.963094 0-57.926188Z"
+                fill="#ffffff" p-id="3842"></path>
+            </svg>
+            </i>
+            <span>登出</span>
+          </div>
+        </template>
+      </el-popconfirm>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useLogout } from '../../hooks';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const { logout } = useLogout(router);
+</script>

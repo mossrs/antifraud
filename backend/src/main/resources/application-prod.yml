@@ -10,9 +10,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://1.117.80.52:3306/antifraud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
-      username: antifraud
-      password: zFRcZdriwTp63PGN
+      url: jdbc:mysql://:/?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+      username:
+      password:
 
 mybatis-plus:
   type-aliases-package: com.mossflower.antifraud.entity
@@ -39,8 +39,8 @@ logging:
     root: info
   logback:
     rollingpolicy:
-      file-name-pattern: /www/wwwroot/antifraud/logs/app-%d-%i.log
+      file-name-pattern:
       max-history: 15
       max-file-size: 100MB
   file:
-    name: /www/wwwroot/antifraud/logs/app.log
+    name:

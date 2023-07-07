@@ -60,8 +60,8 @@
 - 采用swagger进行接口文档
 
 ## 二、项目演示
-演示地址：http://multimedia.logosw.top/ 注：因为cdn缘故 图片可能加载不出来 太耗钱了T_T
-接口文档 https://apifox.com/apidoc/shared-474da90a-af61-4c64-a85c-8a4c5b0bdca1
+- 演示地址：http://multimedia.logosw.top/ 注：因为cdn缘故 图片可能加载不出来 太耗钱了T_T
+- 接口文档 https://apifox.com/apidoc/shared-474da90a-af61-4c64-a85c-8a4c5b0bdca1
 1. 首页 ![首页](docs/1.jpg)
 2. 进入页面 ![场景探索](docs/2.jpg)
 3. 场景探索 ![场景探索](docs/3.jpg)
